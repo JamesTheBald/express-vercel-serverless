@@ -1,8 +1,11 @@
-const app = require("./index");
-const routes = require("./routes/router");
+// from https://github.com/qnxdev/express-vercel-serverless
+// for tutorial https://medium.com/geekculture/deploy-express-project-with-multiple-routes-to-vercel-as-multiple-serverless-functions-567c6ea9eb36
 
-app.use("/", routes);
-/* app.use("/api/", routes);  //for API backend*/
+const app = require("./app");
+const routes = require("./routes/routes");
+
+app.use("/", routes); // for devServer
+// app.use("/api/", routes);  // for API backend
 
 //start server locally
 app.listen(3000,function () {
