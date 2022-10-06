@@ -1,24 +1,13 @@
+// from https://github.com/qnxdev/express-vercel-serverless
+// for tutorial https://medium.com/geekculture/deploy-express-project-with-multiple-routes-to-vercel-as-multiple-serverless-functions-567c6ea9eb36
+
 "use strict";
-require("dotenv").config();
+require("dotenv").config();  // loads environment variables from a .env file into process.env
 
 const express = require("express");
-const cors = require("cors");
 const helmet = require("helmet");
-
-var allowedOrigins = ["https://example.com"];
-/* var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Operation not allowed'))
-    }
-  }
-} */
-
 const app = express();
 
 app.use(helmet());
-/* app.use(cors(corsOptions)); */
 
 module.exports = app;
