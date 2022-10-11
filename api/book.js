@@ -1,6 +1,6 @@
-const app = require("../app");
+const connectExpress = require("../connectExpress");
 const route = require("../routes/book");
 
-app.use("/api/", route);
+connectExpress.use("/api/", route);
 
-module.exports = app;
+module.exports = connectExpress;
